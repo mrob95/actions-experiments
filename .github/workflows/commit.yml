@@ -1,4 +1,4 @@
-name: Breathe tests
+name: Commit
 
 on: [pull_request]
 
