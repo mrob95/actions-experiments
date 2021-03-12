@@ -1,0 +1,19 @@
+name: Breathe tests
+
+on: [pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out
+        uses: actions/checkout@v2
+      - name: Echo
+        run: echo a > a.txt
+      - name: Add & Commit
+        uses: EndBug/add-and-commit@v7.1.0
+        with:
+          add: a.txt
+          author_name: GH Actions
+          message: 'Commit a.txt'
